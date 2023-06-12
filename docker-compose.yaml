@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  nodeapp:
+    build: ./docker
+    container_name: nodeapp
+    # restart: unless-stopped
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/home/node/app
