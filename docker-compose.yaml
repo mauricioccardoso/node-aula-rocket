@@ -1,11 +1,32 @@
 version: "3.8"
 
 services:
+  db:
+    image: postgres
+    container_name: db
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=rentx
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    networks:
+      - node-aula
+
   nodeapp:
     build: ./docker
     container_name: nodeapp
-    # restart: unless-stopped
+    restart: unless-stopped
     ports:
       - 3333:3333
     volumes:
       - .:/home/node/app
+    networks:
+      - node-aula
+
+networks:
+  node-aula:
+    driver: bridge
