@@ -9,7 +9,8 @@ USER node
 
 WORKDIR /home/node/app
 
-EXPOSE 3333
+COPY ./.bash_aliases /home/node
 
+EXPOSE 3333
 
 CMD [ "/home/node/app/docker/start.sh" ]
