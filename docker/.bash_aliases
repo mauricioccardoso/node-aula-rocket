@@ -1,3 +1,5 @@
+alias n='npm run'
+alias dev='npm run dev'
+alias test='npm run test'
 alias xtype='npx typeorm'
 alias ntype='npm run typeorm'
-alias dev='npm run dev'

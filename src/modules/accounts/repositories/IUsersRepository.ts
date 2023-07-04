@@ -1,5 +1,6 @@
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
+
 import { ICreateUserDTO } from "../dtos/ICreateUsersDTO";
-import { User } from "../entities/User";
 
 interface IUsersRepository {
   create({
