@@ -1,5 +1,8 @@
+alias cl='clear'
 alias n='npm run'
 alias dev='npm run dev'
 alias test='npm run test'
 alias xtype='npx typeorm'
 alias ntype='npm run typeorm'
+alias dropt='npm run typeorm schema:drop'
+alias migt='npm run typeorm migration:run'
